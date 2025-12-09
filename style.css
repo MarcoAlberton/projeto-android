@@ -1,0 +1,309 @@
+/* 
+  É possivel utilizar variáveis em CSS
+  - Serve para facilitar alterações futuras no estilo do site, pois simplesmente faz a alteração da cor aonde foi declarado a variável e não em cada seletor
+
+  utiliza-se a pseudo-classe para declarar as variáveis
+  :root{
+      --cor0: #379734;
+      --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+} 
+
+para utilizar é somente colocar por exemplo:
+  background-color: e dar CTRL + espaço e escolher o nome correspondente
+  font-family: CTRL + espaço e escolher o nome correspondente
+
+*/
+
+@font-face {
+  font-family: 'Idroid';
+  src: url('fontes/idroid.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background-color: bisque;
+}
+
+strong{
+  color:#379734;
+}
+
+
+header{
+  text-align: center;
+  padding: 10px;
+  background: linear-gradient(180deg,rgba(51, 189, 101, 1) 68%, rgb(9, 94, 6) 97%);
+  color: white;
+  box-shadow: 5px 5px 30px black;
+}
+
+header > h1{
+  margin-bottom: 25px;
+  font-weight: bold;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 2px black;
+}
+
+header > p{
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.2em;
+  text-shadow: 1px 1px 1px black;
+  font-weight: bold;
+}
+
+header > nav{
+  text-align: start;
+}
+
+nav > a{
+  color: rgb(253, 250, 250);
+  text-decoration: none;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+nav > a:hover{
+  background-color: #195517;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+
+main > article{
+  background-color: white;
+  min-width: 300px;
+  max-width: 1000px;
+  width: 90%;
+  height: 90%;
+  margin: auto;
+}
+
+article#historia > h1{
+  font-family: 'Idroid';
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 20px 0px 5px 15px;
+  color: #195517;
+  font-weight: bold;
+  
+}
+
+article#historia > p{
+  text-align: justify;
+  padding: 0px 15px 10px 15px;
+  text-indent: 30px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 1.3em;
+}
+
+article#historia > p > a{
+  color: #379734;
+  text-decoration: none;
+}
+
+article#historia > p > a:hover{
+  text-decoration: underline;
+  color: red;
+}
+
+article#primeiraVersao > h2{
+  padding-left: 8px ;
+  padding-bottom: 2px;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-family: 'Idroid';
+  color: #195517;
+  font-size: 20px;
+  background: linear-gradient(87deg,rgb(120, 182, 118) 33%, rgba(245, 247, 245, 0.507) 88%);
+  border-radius: 10px;
+
+}
+
+article#primeiraVersao > p{
+  text-align: justify;
+  padding: 10px 15px 15px 15px;
+  text-indent: 30px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 1.3em;
+
+}
+
+article#primeiraVersao > p > a{
+  color: #379734;
+  text-decoration: none;
+}
+
+article#primeiraVersao > p > a:hover{
+  text-decoration: underline;
+  color: red;
+}
+
+article#novoMascote > h2{
+  padding-left: 8px;
+  padding-bottom: 2px;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-family: 'Idroid';
+  color: #236120;
+  font-size: 20px;
+  background: linear-gradient(87deg,rgb(120, 182, 118) 33%, rgba(245, 247, 245, 0.507) 88%);
+  border-radius: 10px;
+}
+
+article#novoMascote > p{
+  text-align: justify;
+  padding: 10px 15px 15px 15px;
+  text-indent: 30px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 1.3em;
+
+}
+
+article#novoMascote > p > a{
+  color: #379734;
+  text-decoration: none;
+}
+
+article#novoMascote > p > a:hover{
+  text-decoration: underline;
+  color: red;
+}
+
+
+article#extra{
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+article#extra > aside{
+  background-color: rgb(120, 182, 118);
+  padding: 0px 0px 10px 0px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+article#extra > aside > h3{
+  background-color: #195517;
+  color: white;
+  padding: 10px 10px 15px 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-weight: bold;
+}
+
+article#extra > aside > p {
+  text-align: justify;
+  padding: 5px 15px 15px 15px;
+  text-indent: 30px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 1.3em;
+
+}
+
+article#extra > aside > ul{
+  text-decoration: none;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  column-count: 2;
+  font-weight: bold;
+  list-style-position: inside;
+}
+
+article#extra > aside > ul > li{
+  list-style: none;
+}
+
+article#extra > aside > ul > li::before{
+  content: '✔️';
+  margin-right: 10px;
+}
+
+article#extra > p {
+  text-align: justify;
+  padding: 5px 15px 30px 15px;
+  text-indent: 30px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+article#extra > aside > p > a{
+  color: #379734;
+  text-decoration: none;
+}
+
+article#extra > aside > p >a:hover{
+  color: red;
+  text-decoration: underline;
+}
+
+article#extra > p > a{
+  color: #379734;
+  text-decoration: none;
+}
+
+article#extra > p >a:hover{
+  color: red;
+  text-decoration: underline;
+}
+
+footer{
+  margin-top: 20px;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  background-color: #195517;
+  box-shadow: -3px -3px 30px black;
+}
+
+footer > a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+footer > a:hover{
+  text-decoration: underline;
+  color: red;
+}
+
+
+.imagem{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+/* Utilizado para tornar o iframe resposivo, se adptando ao tamanho da tela */
+
+
+.video{
+  width: 100%;
+  max-width: 800px; /* opcional */
+  margin: auto;
+}
+
+.video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+}
